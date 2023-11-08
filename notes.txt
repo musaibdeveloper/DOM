@@ -1,0 +1,6 @@
+DOM?
+The Document Object Model (Dom) is and application programming interface (API) for 
+manipulating HTML and XML documents. (add remove, and modify parts of the document HTML.)
+
+
+
