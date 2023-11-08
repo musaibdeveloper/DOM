@@ -1,0 +1,55 @@
+What is DOM ?
+
+- DOM stands for or is an acronym of Document Object Model.
+- The Document Object Model (DOM) is an essential part of web development. 
+    It provides a way for programmers to interact with and manipulate the structure of a website.
+
+- It like an Application Progamming Interface for manipulating HTML and XML documents.
+- The DOM, or Document Object Model, is like a map of a website. Just like how a map shows you where all the streets and buildings are in a city, 
+    the DOM shows you where everything is on a website.
+- The DOM helps your computer understand the different parts of a website and how they are put together.
+- Just like you can use a map to find your way around a city, programmers can use the DOM to find different parts of a website and change their properties. 
+    For example, they can make a button change color when a user hovers over it or make pictures move around on the screen.
+
+- The DOM is a W3C (World Wide Web Consortium) standard.
+
+Why to use DOM ?
+
+- With the help of the DOM, developers can access and change the different parts of a webpage. 
+This allows them to create dynamic and interactive websites, where user interactions can trigger changes in the page's layout and content.
+
+- So, How does this DOM starts and where does it recides. DOM is created when a page is reloaded meaning the Browser creates a document Object
+    model of the web page. Dom is created in a tree like structure called as DOM Tree.
+
+
+DOM  +  JS
+- The DOM and JavaScript are like two friends that work together to make websites cool and interactive. 
+- Together, the DOM and JavaScript make the website come alive and respond to what you do, like moving your mouse or clicking on a button.
+
+
+DOM Structure – Understanding the DOM Tree
+
+- Imagine a website is like a big book, and each page in that book represents a different part of the website. 
+The DOM tree is like a table of contents for that book. It shows you all the different parts of the website, and how they are organized.
+- Each part of the website is called an "element" and these elements are arranged in a tree-like structure.
+
+- The top of the tree is called the "root" and it represents the entire website. From there, the tree branches out into different sections,
+ like the headings, paragraphs, images, and others that make up the entire website.
+
+- Just like how the table of contents in a book helps you find specific pages, the DOM tree helps computers find specific elements on a website.
+- In short, the DOM tree represents the structure of a website in a way that computers can understand. Developers can use it to access and manipulate 
+ different elements in that structure to create dynamic web pages.
+
+How to Access the DOM
+
+- Accessing elements in the DOM means finding specific parts of a website and changing or manipulating them.
+- To access an element on a website, you need to know the specific element you want to access.
+- JavaScript provides different methods to access the elements in the DOM, such as getElementById, getElementsByTagName, querySelector, and querySelectorAll.
+- These methods allow you to find an element based on its id, tagname, or classname and select it for manipulation.
+- For example, you can access a button on a webpage and change its text or color when a user clicks on it. 
+
+Or, you can access an image on a webpage and change it to a different image when a user hovers over it.
+
+Accessing a DOM method
+-HTML DOM methods are actions you can perform (on HTML Elements).
+-HTML DOM properties are values (of HTML Elements) that you can set or change"hi

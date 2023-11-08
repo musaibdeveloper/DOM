@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <ul>
+        <li class="select">List 1 </li>
+        <li id="change">List 2</li>
+        <li class="select">List 3</li>
+    </ul> -->
+    <!-- 
+    <div class "Musaib">
+        <p class = "DOM">Paragraph 1</p>
+        <h2 class = "DOM">Heading 1</h2>
+        <p class="DOM">Paragraph 2</p>
+        <h2 class="DOM">Heading 2</h2>
+    </div> -->
+
+    <ul id="nameS">
+        <li>t1<lis /li>
+        <li>t2</li>
+        <li>t3</li>
+        <li>t4</li>
+    </ul>
+
+    <script>
+
+        // Insert Before.
+
+        // let elm = document.getElementById("name"); // parent
+        // console.log(elm);
+
+        // let create = document.createElement("li");
+        // // console.log(create);
+        // create.textContent = "t5"
+        // // elm.append(create)
+
+        // let positions = elm.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling;
+
+        // elm.insertBefore(create, positions)
+
+
+        // Insert in Body.
+
+        let parent = document.body;
+
+        let create = document.createElement("h2");
+        create.textContent = "New line is added";
+
+
+        let select = document.getElementById("nameS");
+                            // What to insert   Where to insert
+        parent.insertBefore(create            ,      select)
+
+    </script>
+
+</body>
+
+</html>

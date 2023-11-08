@@ -1,0 +1,101 @@
+Get element by ID. 
+We can access any HTML element by the ID which is defined to it. 
+
+document.getElementByID("ID name")
+
+2. Inner HTMl. Get element
+
+We can get the innerHTML of the element 
+varaiblename.innerHTML
+
+3. Update the element of the HTML = Set Elemet
+
+varaiablename.innerHTML = "" Write your new values in the String.
+
+How to select multiple elemets?
+Ans : By Class
+
+We can select more number of elements by class.
+
+
+Select element by Tag. 
+document.getElementByTagName("")
+
+We can select element by ID and use the id name to change the inner HTML.
+
+example : 
+
+
+<div id = "Musaib">
+    <h2>Hello</h2>
+    <p>Hi</p>
+    <h2>Hello</h2>
+    <p>Hey</p>
+</div>
+   
+    <script>
+let div1 = document.getElementById("Musaib")
+        let update = Musaib.getElementsByTagName("p")
+        // let update = document.getElementsByClassName("select");
+      for(let i =0; i<update.length ; i++){
+        update[i].innerHTML = "<h1> Musaib"
+      }   
+
+-------------------------------------------------------------------------------------------------------
+
+4. Query Selector.
+
+There are two types 
+1. document.querySelector(tag.class); It selects the first element which satisy the condition.
+2. document.queryselectorAll(tag.class); It selects the all the elements of the documents which satisfy the condition.
+
+Traversing elements in JavaScript.
+How to select child and parent element. 
+
+We can select the element by id and if the element is a child. 
+Simply, create a var and var = var.elementparent; // This access the parent element of the child.
+
+
+5. How can we select element first Child.
+
+let elm = document.getelementbyID("string")
+let node = elm.firstElementChild;
+
+console.log(node)
+
+In this we can select firstchild and last child. Children select all the childs of the element.
+
+Nextsibling and prevoius sibiling.
+
+6. Inner HTML. 
+
+We can do two things in this. 
+1. Fetch HTML .
+2. Modify HTML
+
+7. Create and Append Element in JavaScript*
+
+
+Normal Example. 
+
+let list = document.getbyId("name);
+
+let item = document.createElement("li");
+
+item.textContent = "new list is added";
+
+list.appendChild(item)
+
+
+8. Insert Before Element. 
+
+
+
+
+
+
+
+
+
+
+
