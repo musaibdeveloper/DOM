@@ -89,6 +89,17 @@ list.appendChild(item)
 
 8. Insert Before Element. 
 
+We can insert the element before.
+Refer index.html
+
+
+9. Insert in Body. 
+Refer Index.html
+
+10. Remove Child.
+
+
+
 
 
 
