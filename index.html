@@ -4,10 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
+    <style>
+        .color {
+
+            background-color: gray;
+        }
+
+        .dim {
+            border: 1px solid red;
+            padding: 100px;
+        }
+    </style>
+
 </head>
 
 <body>
+
+    Refer Methods.txt
     <ul>
         <li class="select">List 1 </li>
         <li id="change">List 2</li>
@@ -21,16 +35,23 @@
         <h2 class="DOM">Heading 2</h2>
     </div>
 
-    <ul id = "menu">
+    <ul id="menu" name="Musaib">
         <li>t1<lis /li>
         <li>t2</li>
         <li>t3</li>
         <li>t4</li>
     </ul>
 
+
+    <!-- <div id="box" class="color">
+        <p>Musaib is a developer</p>
+    </div> -->
+
+    <button id="btn">Click!</button>
+
     <script>
 
-        Insert Before.
+        Insert Before.----------------------------------------------------------------------------------------
 
         let elm = document.getElementById("name"); // parent
         console.log(elm);
@@ -45,7 +66,7 @@
         elm.insertBefore(create, positions)
 
 
-        Insert in Body.
+        Insert in Body.----------------------------------------------------------------------------------------------------
 
         let parent = document.body;
 
@@ -58,7 +79,7 @@
         parent.insertBefore(create            ,      select)
 
 
-        Remove Child Element
+        Remove Child Element---------------------------------------------------------------------------------------
 
         let select = document.getElementById("menu");
         let elm = select.firstElementChild.nextElementSibling;
@@ -67,7 +88,7 @@
         select.removeChild(elm);
 
 
-        Clone Element.
+        Clone Element.--------------------------------------------------------------------------------
 
 
         let parent = document.getElementById("menu");
@@ -84,7 +105,7 @@
 
 
 
-        Replace Element.
+        Replace Element.-----------------------------------------------------------------------------------
 
 
         let parent = document.getElementById("menu");
@@ -98,9 +119,130 @@
         parent.replaceChild(add , replace)
 
 
-        Insert Adjacent HTML.
-        
-        
+        Insert Adjacent HTML.--------------------------------------------------------------------------------------
+
+        We can adjust HTML element by four diiferent positions.
+
+        1. Beforebegin to the selected item.
+        2. Afterbegin to the selected item.
+        3. Beforeend which means just at the end in the div
+        Afterend means after end of the selected iteam in the parent body.
+
+        let parent = document.getElementById("menu");
+        // console.log(parent);
+
+        let add = "<p>New Line is added</p>";
+                                        //  Position , value to write
+            parent.insertAdjacentHTML( "afterend" ,        add);
+
+
+         Change Attribute in JavaScript---------------------------------------------------------------------------------
+
+
+        1. How to set and get attribute.
+        Set Attribute.
+        Get Attribute
+        removeAttribute.
+        Set Attribute.
+
+        let parent = document.getElementById("menu");
+
+        //   let check = parent.hasAttribute("name")
+
+          let check = parent.removeAttribute("name")
+
+        //  let check = parent.getAttribute("name");
+
+         console.log(check);
+
+
+         Change Inline Style in JavaScript.------------------------------------------------------------------
+
+
+        let grab = document.getElementById("btn")
+        console.log(grab);
+
+
+           1 Method
+          grab.style.color = "red";
+
+          2 Method
+
+        grab.style.cssText = "background-color : purple ; margin : 33rem";
+        grab.style.cssText += "background-color : purple ; margin : 33rem";
+
+        This addups the css on the existing.
+
+        3 Method
+
+        grab.setAttribute(`style`, `color : blue ; margin : 5rem`);
+
+
+        Get Computed Style. --------------------------------------------------------------------
+
+        It works in internal CSS.
+
+        let pick = document.getElementById("btn");
+
+        let css = getComputedStyle(pick);
+
+        console.log(css.color);
+
+
+        CSS Classes ---------------------------------------------------------------------------------
+
+
+        let elm = document.getElementById("box")
+        console.log(elm.className);
+
+        box.classList.replace("color", "dim");
+        box.classList.add("color", "dim");
+        box.classList.remove("color", "dim")
+
+        Checking the class is applied or not
+        let result = elm.classList.contains("dim");
+        console.log(result);
+
+        Toggle
+        let result = elm.classList.toggle("color");
+        console.log(result);
+
+
+
+        Height and Width ---------------------------------------------------------------------------
+
+        let elm = document.getElementById("box")
+
+        let width = box.clientWidth;
+        let height = box.clientHeight;
+
+        console.log(width);
+        console.log(height);
+
+        DOM Events--------------------------------------------------------------------------------------
+
+        1. Button click.
+
+        function btnClick() {
+            alert("Button was clicked");
+
+        }
+
+        2. Eventlistner. ----------------------------------------------------------------------------------
+
+
+        let btnaccess = document.getElementById("btn");
+
+        btn.addEventListener(`click`, btnClick)
+
+        btn.addEventListener("mouseover", function () {
+            alert("Mouse is hover over")
+        })
+
+
+        btn.addEventListener("mouseout", function () {
+            alert("Mouse is out")
+        })
 
 
 
@@ -111,7 +253,41 @@
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
