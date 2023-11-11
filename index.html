@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
     <style>
+        body {
+            height: 2000px;
+        }
+
         .color {
 
             background-color: gray;
         }
+
 
         .dim {
             border: 1px solid red;
             padding: 100px;
         }
     </style>
+
+    <img id="imgs" src="./image.jpg" alt="Moutain">
 
 </head>
 
@@ -43,11 +50,17 @@
     </ul>
 
 
-    <!-- <div id="box" class="color">
+     <div id="box" class="color">
         <p>Musaib is a developer</p>
-    </div> -->
+    </div>
 
     <button id="btn">Click!</button>
+    
+   
+
+    <div id="box"></div>
+
+    <form action=""><input type="text" id="myInput"></form>
 
     <script>
 
@@ -243,6 +256,161 @@
         btn.addEventListener("mouseout", function () {
             alert("Mouse is out")
         })
+
+
+        3.   Remove Event Listener--------------------------------------------------------------------------------
+
+        let btnaccess = document.getElementById("btn");
+        // console.log(btnaccess)
+
+        btn.addEventListener(`click`, click)
+
+        function click() {
+            console.log("Click Activated check");
+            alert("Working")
+        }
+
+
+        btn.removeEventListener(`click` , click)
+
+
+        4. ------Page Load Events in JavaScript.
+
+        1. DOMContentLoad : The browser fully loaded HTML and completed building the DOM tree. However it hasn't loaded external resources like stylesheets.
+        In this event you can start selecting DOM nodes or intialize interface.
+
+        2. Load .
+
+        The browers fullt loaded the HTML and also external resoures like images and stylesheets.
+
+        window.addEventListener("DOMContentLoaded" , function(){
+            console.log("DOM tree created");
+        })
+
+        window.addEventListener("load" , function(){
+            console.log("Fully Loaded");
+        });
+
+
+
+        5 Mouse Events in Javascript.
+
+        On click.
+        Right Click.
+        Double click
+        On mouse Down
+        On Mouse up.
+
+
+        6. Key Down event In JS
+
+        window.addEventListener("keydown" , checkkey);
+
+        function checkkey(event){
+            console.log(event.key);
+        }
+
+        7.Scroll event.
+
+        window.addEventListener("scroll", function () {
+            if (window.pageYOffset > 115) {
+
+                document.body.style.background = "blue"
+
+            } else {
+                document.body.style.background = "yellow"
+            }
+        })
+
+        window.addEventListener("wheel", function (event) {
+            if (event.deltaY < 0) {
+                console.log("scrolling up");
+            }
+            else if (event.deltaY > 0) {
+                console.log("scrolling down");
+
+            }
+        });
+
+        8. Input Events -------------------------------------------------------------------------------------------
+ let x = document.getElementById("myInput");
+
+ x.addEventListener("focus" , myfocusFunction);
+ x.addEventListener("blur" , myblurFunction);
+
+ function myfocusFunction(){
+    x.style.background = "yellow"
+ }
+
+ x.addEventListener("change" , function(){
+    console.log(this.value);
+ })
+
+ function myblurFunction(){
+    x.style.background = "red"
+ }
+
+
+  Event Bubbling & Event Capturing in JavaScript--------------------------------------
+
+event Bubbling - it starts from the most specific element.
+event capturing - it starts from the most outer element. 
+
+
+False - Bubbling- Children first later parent. 
+True - Capturing - Parent first and children later. 
+
+Syntax : addEventListner(event, function , useCapture)
+
+Stoppropagation.
+
+
+
+Prevent default 
+
+
+Just wirte it in the function. It will stop the event.
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
